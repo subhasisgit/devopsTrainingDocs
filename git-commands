@@ -1,0 +1,343 @@
+ec2-user:~/environment $ history
+    1  git clone https://github.com/mohanraz81/webtest2506.git
+    2  git status
+    3  cd webtest2506/
+    4  ls -la
+    5  git status
+    6  git add index.html 
+    7  git status
+    8  git commit -m "index.html"
+    9  git status
+   10  git add index.html 
+   11  git commit -m "updated index.html"
+   12  git push
+   13  git logs
+   14  git log
+   15  git branch -v
+   16  git branch testing
+   17  git branch -v
+   18  git checkout testing
+   19  git branch -v
+   20  git add *
+   21  git commit -m "test branch"
+   22  git branch -v
+   23  git checkout master
+   24  git merge testing
+   25  git brach -v
+   26  git branch -v
+   27  git checkout testing
+   28  git add *
+   29  git commit -m "testbranch threeway "
+   30  git checkout master
+   31  git add *
+   32  git commit -m "threeway merge in master"
+   33  git merge testing
+   34  git add *
+   35  git commit -m "merged"
+   36  git branch -v
+   37  history
+   38  cd webtest2506/
+   39  git push
+   40  git checkout testing
+   41  git remote -v
+   42  git push --set-upstream origin testing
+   43  git pull
+   44  git pull --set-upstream origin testing
+   45  git branch --set-upstream origin testing
+   46  git branch --set-upstream-to origin testing
+   47  git pull
+   48  git push --set-upstream origin testing
+   49  git pull
+   50  git pull --help
+   51  git pull origin
+   52  git pull origin testing
+   53  git push --set-upstream origin testing
+   54  history
+   55  git add *
+   56  git commit -m " remote change"
+   57  git push --set-upstream origin testing
+   58  git pull origin testing
+   59  git add *
+   60  git commit -m 'remote merge"
+   61  git commit -m "remote merge"
+   62  git push --set-upstream origin testing
+   63  history
+   64  git branch -av
+   65  git remote -v
+   66  git stash --help
+   67  git stash test
+   68  git stash save test
+   69  git stash list
+   70  git stash apply test
+   71  git stash apply stash@{0}
+   72  git stash --help
+   73  cd ~/environment/
+   74   sudo yum -y install java-1.8.0-openjdk.x86_64
+   75  sudo rpm -qa|grep java
+   76  sudo yum -y remove java-1.7.0-openjdk
+   77  sudo yum -y install jenkins
+   78  wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat-stable/jenkins.repo
+   79  sudo wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat-stable/jenkins.repo
+   80  sudo  rpm --import http://pkg.jenkins-ci.org/redhat-stable/jenkins-ci.org.key
+   81  sudo yum -y install jenkins
+   82  sudo service jenkins start
+   83  sudo chkconfig jenkins on
+   84  sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+   85  cd webtest2506/
+   86  git add *
+   87  git add *
+   88  git commit -m "test"
+   89  git push --set-upstream origin testing
+   90  wget http://www-eu.apache.org/dist/maven/maven-3/3.5.4/binaries/apache-maven-3.5.4-bin.tar.gz
+   91  tar zxvf apache-maven-3.5.4-bin.tar.gz 
+   92  sudo mv apache-maven-3.5.4 /usr/local/bin/
+   93  javac
+   94  sudo yum -y install java-1.8.0-openjdk-devel
+   95  javac
+   96  which javac
+   97  chmod 600 webserver.pem 
+   98  ssh -i webserver.pem ec2-user@ec2-54-165-222-222.compute-1.amazonaws.com
+   99  ssh -i webserver.pem ec2-user@ec2-54-164-98-58.compute-1.amazonaws.com
+  100  sudo yum -y install docker
+  101  sudo usermod -a -G docker ec2-user
+  102  id -a
+  103  sudo service docker start
+  104  sudo service docker status
+  105  sudo chkconfig docker on
+  106  history
+  107  docker info
+  108  docker ps
+  109  docker info
+  110  pwd
+  111  mkdir code
+  112  echo "<h1> This is Test </h1>" > code/index.html
+  113  docker run -d --name my-apache-app -p 9000:80 -v /home/ec2-user/environment/code:/usr/local/apache2/htdocs/ httpd:2.4
+  114  docker ps
+  115  docker ps -a
+  116  docker stop my-apache-app
+  117  docker ps 
+  118  docker ps  -a
+  119  docker start my-apache-app
+  120  docker restart my-apache-app
+  121  docker inspect my-apache-app|more
+  122  ps -eaf|grep 7730
+  123  docker restart my-apache-app
+  124  docker inspect my-apache-app|more
+  125  docker exec my-apache-app cat /etc/hosts
+  126  docker exec my-apache-app ps -eaf
+  127  docker exec -it my-apache-app /bin/bash
+  128  docker ps
+  129  docker stop my-apache-app; docker rm my-apache-app
+  130  docker ps -a
+  131  docker images
+  132  docker pull ubuntu
+  133  docker images
+  134  docker pull centos
+  135  docker images
+  136  cd myapache/frontend/
+  137  docker build -t myapache:1.0 .
+  138  docker images
+  139  docker images
+  140  docker run -d --name mytestapache -p 9001:80 myapache:1.0
+  141  docker run -it ubuntu:latest /bin/bash
+  142  cd myubuntu/
+  143  docker build -t myubuntu:1.0 .
+  144  docker images
+  145  docker images --all
+  146  docker tag myapache:1.0 mohanraz81/myapache2806:1.0
+  147  docker tag myapache:1.0 mohanraz81/myapache2806:first
+  148  docker tag myapache:1.0 mohanraz81/myapache2806:latest
+  149  docker image
+  150  docker images
+  151  docker login
+  152  docker push mohanraz81/myapache2806
+  153  history
+  154  dig ns mohansyntest.tk
+  155  wget -O kops https://github.com/kubernetes/kops/releases/download/1.8.1/kops-linux-amd64
+  156  chmod +x ./kops
+  157  sudo mv ./kops /usr/local/bin/
+  158  wget -O kubectl https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
+  159  chmod +x ./kubectl
+  160  sudo mv ./kubectl /usr/local/bin/kubectl
+  161  aws configure
+  162  aws s3api create-bucket --bucket kube-mohansyntest-tk-state-store  --region us-east-1
+  163  aws s3api put-bucket-versioning --bucket kube-mohansyntest-tk-state-store  --versioning-configuration Status=Enabled
+  164  export "NAME=kubecluster.mohansyntest.tk" >> ~/.bash_profile 
+  165  export "export KOPS_STATE_STORE=s3://kube-mohansyntest-tk-state-store" >> ~/.bash_profile 
+  166  echo "NAME=kubecluster.mohansyntest.tk" >> ~/.bash_profile 
+  167  echo "export KOPS_STATE_STORE=s3://kube-mohansyntest-tk-state-store" >> ~/.bash_profile 
+  168  echo "export NAME=kubecluster.mohansyntest.tk" >> ~/.bash_profile 
+  169  echo $NAME
+  170  echo $KOPS_STATE_STORE
+  171  kops create cluster     --zones=us-east-1a,us-east-1b,us-east-1c     --master-zones=us-east-1a,us-east-1b,us-east-1c     --node-count=4     --node-size=t2.small     --master-size=t2.small     --name ${NAME}
+  172  kops delete cluster kubecluster.mohansyntest.tk
+  173  kops delete cluster kubecluster.mohansyntest.tk --yes
+  174  ssh-keygen
+  175  echo $NAME
+  176  echo $KOPS_STATE_STORE
+  177  kops create cluster     --zones=us-east-1a,us-east-1b,us-east-1c     --master-zones=us-east-1a,us-east-1b,us-east-1c     --node-count=4     --node-size=t2.small     --master-size=t2.small     --name ${NAME}
+  178  kops edit cluster ${NAME}
+  179  kops update cluster ${NAME} --yes
+  180  kops validate cluster
+  181  cat ~/.kube/config 
+  182  kubectl get nodes
+  183  kubectl get namespaces
+  184  kubectl get namespace
+  185  kops validate cluster
+  186  kubectl
+  187  kubectl --help
+  188  kubectl get
+  189  kubectl explain
+  190  kubectl explain nodes
+  191  kubectl get
+  192  kubectl get pods
+  193  ls -la ~/.kube/
+  194  kubectl
+  195  kubectl get nodes
+  196  kubectl --help
+  197  kubectl get --help
+  198  kubectl get pod
+  199  s
+  200  kubectl get pods
+  201  vi /etc/hosts
+  202  kubectl get pods
+  203  kubectl describe nodes
+  204  curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.11.0/bin/linux/amd64/kubectl 
+  205  ls
+  206  chmod +x kubectl 
+  207  mv kubectl /usr/local/bin/
+  208  sudo mv kubectl /usr/local/bin/
+  209  kubectl get pods
+  210  wget https://storage.googleapis.com/kubernetes-release/release/v1.8.7/bin/darwin/amd64/kubectl
+  211  chmod +x kubectl 
+  212  mv kubectl /usr/local/bin/
+  213  sudo mv kubectl /usr/local/bin/
+  214  kubectl get pods
+  215  cat <<EOF > /etc/yum.repos.d/kubernetes.repo
+  216  [kubernetes]
+  217  name=Kubernetes
+  218  baseurl=https://packages.cloud.google.com/yum/repos/kubernetes-el7-x86_64
+  219  enabled=1
+  220  gpgcheck=1
+  221  repo_gpgcheck=1
+  222  gpgkey=https://packages.cloud.google.com/yum/doc/yum-key.gpg https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg
+  223  EOF
+  224  cat <<EOF kubernetes.repo
+  225  [kubernetes]
+  226  name=Kubernetes
+  227  baseurl=https://packages.cloud.google.com/yum/repos/kubernetes-el7-x86_64
+  228  enabled=1
+  229  gpgcheck=1
+  230  repo_gpgcheck=1
+  231  gpgkey=https://packages.cloud.google.com/yum/doc/yum-key.gpg https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg
+  232  EOF
+  233  cat <<EOF kubernetes.repo
+  234  [kubernetes]
+  235  name=Kubernetes
+  236  baseurl=https://packages.cloud.google.com/yum/repos/kubernetes-el7-x86_64
+  237  enabled=1
+  238  gpgcheck=1
+  239  repo_gpgcheck=1
+  240  gpgkey=https://packages.cloud.google.com/yum/doc/yum-key.gpg https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg
+  241  EOF
+  242  touch kubernetes.repo
+  243  cat <<EOF kubernetes.repo
+  244  [kubernetes]
+  245  name=Kubernetes
+  246  baseurl=https://packages.cloud.google.com/yum/repos/kubernetes-el7-x86_64
+  247  enabled=1
+  248  gpgcheck=1
+  249  repo_gpgcheck=1
+  250  gpgkey=https://packages.cloud.google.com/yum/doc/yum-key.gpg https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg
+  251  EOF
+  252  sudo mv kubernetes.repo /etc/yum.repos.d/
+  253  yum install -y kubectl
+  254  sudo yum install -y kubectl
+  255  curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
+  256  sudo mv kubectl /usr/local/bin/
+  257  kubectl get nodes
+  258  sudo chmod +x  /usr/local/bin/kubectl 
+  259  kubectl get nodes
+  260  kubectl -v
+  261  kubectl -v-version
+  262  kubectl --version
+  263  curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.11.0/bin/linux/amd64/kubectl
+  264  sudo mv kubectl /usr/local/bin/
+  265  sudo chmod +x  /usr/local/bin/kubectl 
+  266  kubectl get nodes
+  267  kubectl get node
+  268  kubectl get node --namespace=kube-system
+  269  kubectl get nodes --namespace=kube-system
+  270  kubectl get
+  271  kubectl explain nodes
+  272  kubectl get
+  273  kubectl api-resources
+  274  kubectl get nodes
+  275  ls -la .kube
+  276  ls -la ~/.kube
+  277  rm -rf  ~/.kube/cache/*
+  278  kubectl get nodes
+  279  kubectl describe namespace kube-system
+  280  kubectl get
+  281  kubectl get -h
+  282  kubectl get nodes
+  283  kubectl get deployments
+  284  kubectl --version
+  285  kubectl version
+  286  curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.8.11/bin/linux/amd64/kubectl
+  287  sudo mv kubectl /usr/local/bin/
+  288  sudo chmod +x  /usr/local/bin/kubectl 
+  289  kubectl version
+  290  kubectl get nodes
+  291  kunectl describe node ip-172-20-104-171.ec2.internal
+  292  kubectl describe node ip-172-20-104-171.ec2.internal
+  293  kubectl get namespaces
+  294  kubectl get pods --namespace=kube-system
+  295  kubectl create namespace test
+  296  kubectl get namespaces
+  297  kubectl describe namespace test
+  298  kubectl apply -f quota.yaml --namespace=test
+  299  kubectl describe namespace test
+  300  kubectl config set-context $(kubectl config current-context) --namespace=test
+  301  kubectl config view | grep namespace:
+  302  kubectl apply -f webdeployment.yaml 
+  303  kubectl get deployments
+  304  kubectl describe deployment myapache-deployment
+  305  kubectl get rs
+  306  kubecl api
+  307  kubectl api
+  308  kubectl -h
+  309  kubectl api-resources
+  310  kubectl --help
+  311  kubectl api-version
+  312  kubectl api-versions
+  313  kubectl api-versions -v
+  314  kubectl get rs
+  315  kubectl get pods
+  316  kubectl describe pod myapache-deployment-79d55879f9-d5jrr
+  317  kubectl get services
+  318  kubectl describe service frontend
+  319  curl http://www.mohansyntest.tk
+  320  sudo usermod -a -G docker jenkins
+  321  sudo service jenkins restart
+  322  sudo yum -y install ansible
+  323  which ansible-playbook
+  324  sudo pip install boto boto3 botocore
+  325  sudo cp -R ~/.kube/ /var/lib/jenkins/
+  326  sudo chmod -R jenkins:jenkins /var/lib/jenkins/.kube/
+  327  sudo chown -R jenkins:jenkins /var/lib/jenkins/.kube/
+  328  kubectl get pods
+  329  kubectl apply -f quota.yaml --namespace=test
+  330  kubectl get deployment
+  331  kubectl describe deployment backend
+  332  kubectl apply -f quota.yaml --namespace=test
+  333  kubectl get deployments
+  334  kubectl get pods
+  335  kubectl get pods --namespace=default
+  336  kubectl get deployments
+  337  kubectl get pods
+  338  kubectl get deployments
+  339  kubectl get deployments
+  340  kubectl delete deployment frontend backend
+  341  kubectl get pods
+  342  history
