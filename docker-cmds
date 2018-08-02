@@ -1,0 +1,160 @@
+1  git clone https://github.com/subhasisgit/webtestsubh.git
+    2  ls
+    3  cd webtestsubh
+    4  ls -la
+    5  ls
+    6  git status
+    7  git add *
+    8  git status
+    9  git commit -m 'initial Version'
+   10  git status
+   11  git push
+   12  git log
+   13  git -branch -v
+   14  git branch -v
+   15  git branch dev
+   16  git branch -v
+   17  git checkout dev
+   18  git branch -v
+   19  git add *
+   20  git commit -m 'Updated in dev'
+   21  git branch -v
+   22  git log
+   23  git checkout master
+   24  git merge dev
+   25  git checkout dev
+   26  vi index.html
+   27  git status
+   28  git add *
+   29  git commit -m 'CR1'
+   30  git checkout master
+   31  vi index.html
+   32  git status
+   33  git add *
+   34  git commit -m 'Proj2 changes'
+   35  git status
+   36  git merge dev
+   37  git add *
+   38  git commit -m 'Merged'
+   39  git checkout dev
+   40  git checkout master
+   41  git branch -v --all
+   42  git remote -v
+   43  git push --set upstream origin master :dev
+   44  git push --set-upstream origin master :dev
+   45  git push --set-upstream origin master:dev
+   46  vi index.html
+   47  git push --set-upstream origin master:dev
+   48  git pull origin dev
+   49  git add *
+   50  git commit -m 'Updated local'
+   51  git pull origin dev
+   52  git add *
+   53  git commit -m 'Merged master local to dev remote'
+   54  git push --set-upstream origin master:dev
+   55  history
+   56  cd C:\Users\admin
+   57  C:
+   58  cd C:
+   59  pwd
+   60  cd ..
+   61  git clone https://github.com/subhasisgit/devopsTrainingDocs.git
+   62  git add *
+   63  ls
+   64  cd devopsTrainingDocs
+   65  git add *
+   66  git commit -m 'Initial'
+   67  git push
+   68  sudo yum -y install java-1.8.0-openjdk.x86_64
+   69  sudo yum -y remove java-1.7.0-openjdk
+   70  sudo wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat-stable/jenkins.repo
+   71  sudo  rpm --import http://pkg.jenkins-ci.org/redhat-stable/jenkins-ci.org.key
+   72  sudo yum install -y  jenkins
+   73  sudo service jenkins start
+   74  sudo chkconfig jenkins on
+   75  sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+   76  which ssh
+   77  ls
+   78  cd webtest
+   79  cd webtestsubh
+   80  git checkout dev
+   81  vi index.html
+   82  git add *
+   83  git commit -m 'Test Jenkins trigger build'
+   84  git push origin dev
+   85  git pull origin dev
+   86  git add *
+   87  git commit -m 'Merged'
+   88  git push
+   89  git push origin dev
+   90  sudo ec2-user
+   91  sudo yum -y install java-1.8.0-openjdk-devel
+   92  cd ..
+   93  sudo yum -y install java-1.8.0-openjdk-devel
+   94  $ wget http://www-us.apache.org/dist/maven/maven-3/3.5.4/binaries/apache-maven-3.5.4-bin.tar.gz 
+   95  wget http://www-us.apache.org/dist/maven/maven-3/3.5.4/binaries/apache-maven-3.5.4-bin.tar.gz
+   96  tar xzvf apache-maven-3.5.4-bin.tar.gz
+   97  sudo mv apache-maven-3.5.4 /usr/local/
+   98  chmod 600 webkey.pem
+   99  ssh -i webkey.pem ec2-user@18.206.45.161
+  100  ls
+  101  chmod 600 webkey.pem
+  102  ssh -i webkey.pem ec2-user@18.206.45.161
+  103  ssh -i webkey.pem ec2-user@18.212.50.6
+  104  chmod 600 webkey.pem
+  105  ssh -i webkey.pem ec2-user@18.206.45.161
+  106  chmod 777 webkey.pem
+  107  ssh -i webkey.pem ec2-user@18.212.50.6
+  108  chmod 600 webkey.pem
+  109  ssh -i webkey.pem ec2-user@18.212.50.6
+  110  ssh -i webkey.pem ec2-user@18.206.45.161
+  111  ps -ef | grep stress
+  112  ps -ef | grep stress
+  113  pkill -9 stress
+  114  pkill -9 stress
+  115  sudo yum -y install docker
+  116  sudo usermod -a -G docker ec2-user
+  117  id -a
+  118  sudo service docker start
+  119  sudo chkconfig docker on
+  120  docker ps
+  121  mkdir code
+  122  echo "<h1> Ths is docker test image</h1>" > code/index.html
+  123  docker run -dit --name my-apache-app -p 8080:80 -v /home/ec2-user/environment/code:/usr/local/apache2/htdocs/ httpd:2.4
+  124  docker ps
+  125  docker run -dit --name my-apache-app -p 9000:80 -v /home/ec2-user/environment/code:/usr/local/apache2/htdocs/ httpd:2.4
+  126  docker run -dit --name my-apache-app1 -p 9000:80 -v /home/ec2-user/environment/code:/usr/local/apache2/htdocs/ httpd:2.4
+  127  docker ps
+  128  docker images
+  129  docker stop my-apache-app1
+  130  docker stop my-apache-app
+  131  docker ps -a
+  132  docker start my-apache-app1
+  133  docker ps -a
+  134  docker inspect my-apache-app1
+  135  docker exec -it my-apache-app1 /bin/bash
+  136  docker restart my-apache-app1
+  137  docker inspect my-apache-app1
+  138  docker stop my-apache-app1
+  139  docker ps
+  140  docker rm my-apache-app1
+  141  docker ps
+  142  cd testapp/frontend
+  143  docker build -t myapache:1.0 .
+  144  ls
+  145  hist
+  146  history
+  147  docker run -it ubuntu:latest /bin/bash
+  148  cd  testapp/backend
+  149  docker build -t mynginx:1.0 .
+  150  history
+  151  docker build -t mynginx:1.0 .
+  152  docker run -d --name mytestnginx -p9000:80 mynginx:1.0
+  153  docker ps
+  154  docker tag mynginx:1.0 subhasismishra20/mynginx:latest
+  155  docker tag mynginx:1.0 subhasismishra20/mynginx:1.0
+  156  docker tag mynginx:1.0 subhasismishra20/mynginx:first
+  157  docker login
+  158  docker push subhasismishra20/mynginx
+  159  docker run -d -p 9001:80 mohanraz81/mynginx0208
+  160  history
